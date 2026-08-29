@@ -56,9 +56,9 @@
     "collect_subject": true
   },
   "distribution": {
-    "homepage": "https://kujo.dev",
+    "homepage": "https://github.com/kujolang/cms-contact-form",
     "repository": "https://github.com/kujolang/cms-contact-form",
-    "package_url": "",
+    "package_url": "https://github.com/kujolang/cms-contact-form/releases/latest/download/cms-contact-form.zip",
     "integrity": ""
   }
 }

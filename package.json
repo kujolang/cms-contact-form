@@ -1,7 +1,7 @@
 {
   "name": "@kujolang/cms-contact-form",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "Portable contact form plugin showcase for Kujo CMS.",
   "type": "module",
   "engines": {
@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node src/server.mjs",
     "test": "bash scripts/check-brand-isolation.sh && node --test",
-    "cli": "node src/cli.mjs"
+    "cli": "node src/cli.mjs",
+    "package": "node scripts/package-plugin.mjs"
   },
   "license": "MIT"
 }

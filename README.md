@@ -32,11 +32,11 @@ The default service URL is `http://127.0.0.1:4310`. Runtime data is written unde
 Validate and install the manifest through the CMS API-backed CLI:
 
 ```bash
-CMS_API_TOKEN=... /path/to/cms/scripts/cms-extensions.sh plugin:validate kujo-plugin.json
-CMS_API_TOKEN=... /path/to/cms/scripts/cms-extensions.sh plugin:install kujo-plugin.json active
+npm run package
+CMS_API_TOKEN=... /path/to/cms/scripts/cms-extensions.sh plugin:install-zip dist/cms-contact-form.zip active
 ```
 
-Package installation records the portable contract. Run the connector service separately and configure its public URL in the installed plugin settings. Deployment tooling should pin an immutable release and verify its declared integrity digest.
+Administrators can also upload the ZIP from **CMS Studio → Themes & plugins**. Package installation records the portable contract and a digest-bound archive receipt. Run the connector service separately and configure its public URL in the installed plugin settings. Deployment tooling should pin an immutable release and verify its declared integrity digest.
 
 ## Add a form to any theme
 
