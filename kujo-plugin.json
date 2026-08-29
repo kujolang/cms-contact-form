@@ -1,0 +1,64 @@
+{
+  "schema": "kujo.plugin/v1",
+  "key": "contact_form",
+  "name": "Kujo Contact Form",
+  "version": "1.0.0",
+  "description": "Portable contact forms with accessible browser rendering, durable submissions, moderation, notifications, REST operations, and CLI parity.",
+  "license": "MIT",
+  "author": {
+    "name": "Kujo",
+    "url": "https://kujo.dev"
+  },
+  "compatibility": {
+    "cms": ">=1.0.0",
+    "node": ">=24"
+  },
+  "runtime": "hybrid",
+  "capabilities": [
+    "forms.render",
+    "submissions.create",
+    "submissions.read",
+    "submissions.moderate",
+    "events.emit",
+    "notifications.deliver"
+  ],
+  "events": ["contact.submitted"],
+  "abilities": [
+    {
+      "name": "contact.submissions.list",
+      "description": "List contact submissions with bounded pagination and status filtering.",
+      "method": "GET",
+      "path": "/v1/submissions",
+      "permission": "contact.read"
+    },
+    {
+      "name": "contact.submissions.moderate",
+      "description": "Change the moderation status of one contact submission.",
+      "method": "PATCH",
+      "path": "/v1/submissions/:id",
+      "permission": "contact.manage"
+    }
+  ],
+  "settings_schema": {
+    "type": "object",
+    "properties": {
+      "service_url": {"type": "string", "format": "uri"},
+      "default_form": {"type": "string", "pattern": "^[a-z0-9_-]{2,64}$"},
+      "success_message": {"type": "string", "maxLength": 240},
+      "collect_subject": {"type": "boolean"}
+    },
+    "additionalProperties": false
+  },
+  "defaults": {
+    "service_url": "http://127.0.0.1:4310",
+    "default_form": "contact",
+    "success_message": "Thanks. Your message has been received.",
+    "collect_subject": true
+  },
+  "distribution": {
+    "homepage": "https://kujo.dev",
+    "repository": "https://github.com/kujolang/cms-contact-form",
+    "package_url": "",
+    "integrity": ""
+  }
+}

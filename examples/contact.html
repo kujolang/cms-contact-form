@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kujo Contact Form Example</title>
+    <script type="module" src="http://127.0.0.1:4310/assets/contact-form.js"></script>
+    <style>
+      body { font: 16px/1.5 system-ui, sans-serif; margin: 3rem auto; max-width: 42rem; padding: 0 1rem; }
+      .kujo-contact-form { display: grid; gap: .75rem; }
+      .kujo-contact-form input, .kujo-contact-form textarea, .kujo-contact-form button { font: inherit; padding: .75rem; }
+      .kujo-contact-form textarea { min-height: 10rem; }
+      .kujo-contact-trap { height: 0; overflow: hidden; position: absolute; width: 0; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Contact us</h1>
+      <kujo-contact-form endpoint="http://127.0.0.1:4310" form-key="contact"></kujo-contact-form>
+    </main>
+  </body>
+</html>
