@@ -39,6 +39,28 @@
       "permission": "contact.manage"
     }
   ],
+  "connectors": [
+    {
+      "key": "contact-form",
+      "label": "Contact Form",
+      "purpose": "Accessible form delivery, durable submissions, moderation, and signed notifications.",
+      "mode": "plugin_runtime",
+      "approval_required": false
+    }
+  ],
+  "admin": {
+    "icon": "",
+    "navigation": [
+      {
+        "key": "contact_forms",
+        "label": "Contact forms",
+        "href": "/cms/plugins",
+        "order": 710,
+        "capability": "manage_extensions",
+        "icon": ""
+      }
+    ]
+  },
   "settings_schema": {
     "type": "object",
     "properties": {
