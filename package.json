@@ -5,7 +5,7 @@
   "description": "Portable contact form plugin showcase for Kujo CMS.",
   "type": "module",
   "engines": {
-    "node": ">=24"
+    "node": ">=24.22.1 <25 || >=26.12.1"
   },
   "scripts": {
     "start": "node src/server.mjs",
