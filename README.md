@@ -15,7 +15,7 @@ The service rejects unknown fields, limits body size and message lengths, applie
 
 ## Run locally
 
-Requires Node 24 or newer.
+Requires Node 24.22.1+ or 26.12.1+ within the supported release lines.
 
 ```bash
 cp .env.example .env

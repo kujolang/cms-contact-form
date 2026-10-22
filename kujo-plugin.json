@@ -2,7 +2,7 @@
   "schema": "kujo.plugin/v1",
   "key": "contact_form",
   "name": "Kujo Contact Form",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Portable contact forms with accessible browser rendering, durable submissions, moderation, notifications, REST operations, and CLI parity.",
   "license": "MIT",
   "author": {
@@ -11,7 +11,7 @@
   },
   "compatibility": {
     "cms": ">=1.0.0",
-    "node": ">=24"
+    "node": ">=24.22.1 <25 || >=26.12.1"
   },
   "runtime": "hybrid",
   "capabilities": [
@@ -22,7 +22,9 @@
     "events.emit",
     "notifications.deliver"
   ],
-  "events": ["contact.submitted"],
+  "events": [
+    "contact.submitted"
+  ],
   "abilities": [
     {
       "name": "contact.submissions.list",
@@ -64,10 +66,21 @@
   "settings_schema": {
     "type": "object",
     "properties": {
-      "service_url": {"type": "string", "format": "uri"},
-      "default_form": {"type": "string", "pattern": "^[a-z0-9_-]{2,64}$"},
-      "success_message": {"type": "string", "maxLength": 240},
-      "collect_subject": {"type": "boolean"}
+      "service_url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "default_form": {
+        "type": "string",
+        "pattern": "^[a-z0-9_-]{2,64}$"
+      },
+      "success_message": {
+        "type": "string",
+        "maxLength": 240
+      },
+      "collect_subject": {
+        "type": "boolean"
+      }
     },
     "additionalProperties": false
   },

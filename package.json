@@ -1,6 +1,6 @@
 {
   "name": "@kujolang/cms-contact-form",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Portable contact form plugin showcase for Kujo CMS.",
   "type": "module",
