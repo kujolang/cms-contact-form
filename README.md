@@ -1,5 +1,9 @@
 # Kujo Contact Form
 
+[![Version](https://img.shields.io/badge/version-1.0.1-black)](https://github.com/kujolang/cms-contact-form)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+[![built for Kujo](https://img.shields.io/badge/built%20for-Kujo-white.svg)](https://github.com/kujolang/kujo)
+
 A production-minded showcase plugin for Kujo CMS. It is a standalone hybrid package: an accessible browser component handles public forms, while a zero-dependency Node service validates and stores submissions for administrators and agents.
 
 ## What ships
